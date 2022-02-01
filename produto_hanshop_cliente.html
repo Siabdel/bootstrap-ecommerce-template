@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Produto_Hanshop_Cliente - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Produto</legend>
+
+<!-- Prepended checkbox -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_ativo">Ativo</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <span class="input-group-addon">     
+          <input checked="checked" type="checkbox">     
+      </span>
+      <input id="_ativo" name="_ativo" class="form-control" placeholder="" type="text">
+    </div>
+    <p class="help-block">Indica se o produto está disponível.</p>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_codigo">Código</label>  
+  <div class="col-md-4">
+  <input id="_codigo" name="_codigo" placeholder="" class="form-control input-md" type="text">
+  <span class="help-block">Caso não seja inserido por você, geraremos um automático.</span>  
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_descricao">Descrição</label>  
+  <div class="col-md-4">
+  <input id="_descricao" name="_descricao" placeholder="" class="form-control input-md" required="" type="text">
+  <span class="help-block">Nome do produto</span>  
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_descricao_completa">Descrição Completa</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="_descricao_completa" name="_descricao_completa"></textarea>
+  </div>
+</div>
+
+<!-- Search input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_categoria">Categoria</label>
+  <div class="col-md-4">
+    <input id="_categoria" name="_categoria" placeholder="" class="form-control input-md" type="search">
+    <p class="help-block">Utilize ">" para  adiconar uma sub categoria. Ex: Categoria 1 > Subcategoria 1. Caso não exista, as mesmas serão inseridas.</p>
+  </div>
+</div>
+
+<!-- Button Drop Down -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_categoria_lista">Categorias no produto</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <input id="_categoria_lista" name="_categoria_lista" class="form-control" placeholder="" type="text">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          Remover
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu pull-right">
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Prepended text-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_preco">Preço</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <span class="input-group-addon">R$</span>
+      <input id="_preco" name="_preco" class="form-control" placeholder="0,00" required="" type="text">
+    </div>
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_estoque">Estoque</label>  
+  <div class="col-md-4">
+  <input id="_estoque" name="_estoque" placeholder="0" class="form-control input-md" required="" type="text">
+    
+  </div>
+</div>
+
+<!-- Prepended checkbox -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_estoque_negativo">Permitir venda sem estoque</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <span class="input-group-addon">     
+          <input type="checkbox">     
+      </span>
+      <input id="_estoque_negativo" name="_estoque_negativo" class="form-control" placeholder="" type="text">
+    </div>
+    <p class="help-block">Caso marcado, permitirá que o cliente compre mesmo sem quantidade em estoque.</p>
+  </div>
+</div>
+
+<!-- Search input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_ean">Código de barras</label>
+  <div class="col-md-4">
+    <input id="_ean" name="_ean" placeholder="" class="form-control input-md" type="search">
+    <p class="help-block">Código de barras do produto.</p>
+  </div>
+</div>
+
+<!-- Prepended checkbox -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_entrega">Entrega</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <span class="input-group-addon">     
+          <input type="checkbox">     
+      </span>
+      <input id="_entrega" name="_entrega" class="form-control" placeholder="" type="text">
+    </div>
+    <p class="help-block">Indica que o produto possui entrega.</p>
+  </div>
+</div>
+
+<!-- Multiple Radios (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_entrega_por">Entrega por</label>
+  <div class="col-md-4"> 
+    <label class="radio-inline" for="_entrega_por-0">
+      <input name="_entrega_por" id="_entrega_por-0" value="1" checked="checked" type="radio">
+      País
+    </label> 
+    <label class="radio-inline" for="_entrega_por-1">
+      <input name="_entrega_por" id="_entrega_por-1" value="2" type="radio">
+      Estados
+    </label> 
+    <label class="radio-inline" for="_entrega_por-2">
+      <input name="_entrega_por" id="_entrega_por-2" value="3" type="radio">
+      Cidades
+    </label> 
+    <label class="radio-inline" for="_entrega_por-3">
+      <input name="_entrega_por" id="_entrega_por-3" value="4" type="radio">
+      Bairros
+    </label> 
+    <label class="radio-inline" for="_entrega_por-4">
+      <input name="_entrega_por" id="_entrega_por-4" value="5" type="radio">
+      Ceps
+    </label> 
+    <label class="radio-inline" for="_entrega_por-5">
+      <input name="_entrega_por" id="_entrega_por-5" value="6" type="radio">
+      Distância
+    </label>
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_entrega_distancia">Distância</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <input id="_entrega_distancia" name="_entrega_distancia" class="form-control" placeholder="0" type="text">
+      <span class="input-group-addon">KM</span>
+    </div>
+    <p class="help-block">Distância máxima para entrega</p>
+  </div>
+</div>
+<!-- Search input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_pesquisa_insere_cep">Locais de entrega</label>
+  <div class="col-md-4">
+    <input id="_pesquisa_insere_cep" name="_pesquisa_insere_cep" placeholder="" class="form-control input-md" type="search">
+    <p class="help-block">Pesquise o local por cep ou nome</p>
+  </div>
+</div>
+
+<!-- Button Drop Down -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_locais_entrega_lista">Locais de entrega do produto</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <input id="_locais_entrega_lista" name="_locais_entrega_lista" class="form-control" placeholder="" type="text">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          Remover
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu pull-right">
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- File Button --> 
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_imagem_buscar">Buscar imagens</label>
+  <div class="col-md-4">
+    <input id="_imagem_buscar" name="_imagem_buscar" class="input-file" type="file">
+  </div>
+</div>
+
+<!-- Button Drop Down -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_imagem">Imagens no produto</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <input id="_imagem" name="_imagem" class="form-control" placeholder="" type="text">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          Remover
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu pull-right">
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_salvar"></label>
+  <div class="col-md-4">
+    <button id="_salvar" name="_salvar" class="btn btn-success">Salvar</button>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="_cancelar"></label>
+  <div class="col-md-4">
+    <button id="_cancelar" name="_cancelar" class="btn btn-danger">Cancelar</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+<script type="text/javascript">
+
+</scr
